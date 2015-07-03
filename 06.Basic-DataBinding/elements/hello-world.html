@@ -1,5 +1,4 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
 <dom-module id="hello-world">
     <style>
         h1 {
@@ -8,24 +7,24 @@
         }
     </style>
     <template>
-       <ul>
-          <template is="dom-repeat" items="{{names}}">
-           <li>Hello <b>{{item.name}}</b></li>
-           </template>
-       </ul>
+        <ul>
+            <template is="dom-repeat" items="{{names}}">
+                <li>Hello <b>{{item.name}}</b>
+                </li>
+            </template>
+        </ul>
     </template>
-
     <script>
         Polymer({
             is: "hello-world",
-            ready : function() {
-                this.names = [ {
+            ready: function () {
+                this.names = [{
                     name: "World"
-                },{
+                }, {
                     name: "Scott"
-                },{
+                }, {
                     name: "Ben"
-                } ];                              
+                }];
             },
             hostAttributes: {
                 name: "World"

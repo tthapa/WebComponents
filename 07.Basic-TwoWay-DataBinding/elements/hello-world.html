@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="hello-world">
+    <style>
+        h1 {
+            font-family: sans-serif;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+    <template>
+      <h1>Hello <b>{{name}}</b></h1>
+      <input type="text" value="{{name::input}}">
+      <button on-click=changeName>Change Name</button>
+    </template>
+    <script>
+        Polymer({
+            is: "hello-world",
+            ready : function(){
+            },
+            changeName: function(){
+                this.name="You";
+            }
+        });
+    </script>
+</dom-module>
