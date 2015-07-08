@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Web Components | Presentation component</title>
+
+    <script type="text/javascript" src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel='import' href='bower_components/ninja-presentation/src/ninja-presentation.html'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .very-front h1 {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul.intro {}
+        
+        li.nb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li.nb.small {
+            font-size: 28px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 60px;
+        }
+        
+        li {
+            font-size: 36px;
+        }
+        
+        li li {
+            font-size: 30px;
+        }
+        
+        strong {
+            display: block;
+            font-size: 30px;
+            font-weight: normal;
+        }
+        
+        pre {
+            font-size: 16px;
+            background: #FFF;
+        }
+        
+        ul.sm {
+            margin-top: 10px;
+        }
+        
+        ul.sm li {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ninja-presentation>
+        <ninja-slide class="very-front">
+            <h1>And Introduction to <br/>Web Components</h1>
+            <ul class="intro">
+                <li class="nb small">- Thaman Singh Thapa</li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>So, Web Components</h1>
+            <ul>
+                <li class="fragment">A Tectonic Shift for Web Development
+                </li>
+                <li class="fragment">A set of emerging standards aimed at
+                    <ul>
+                        <li class="fragment">making reusable widgets</li>
+                        <li class="fragment">allow developers to extend HTML
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Understanding Web Components</h1>
+            <ul>
+                <li class="fragment">Lets take a look at existing element, the video tag</li>
+            </ul>
+            <img class="fragment" src="images/videoelement.png">
+
+            <strong class="fragment">Neat. But, what is happening behind the scenes </strong>
+        </ninja-slide>
+        <ninja-slide>
+            <img src="images/videoshadowdom.png">
+        </ninja-slide>
+        <ninja-slide>
+            <strong>By default, the browser hides all the verbose code so you don’t need to see it or worry about writing it when you want to place a video.</strong>
+            <strong class="fragment">Web Components allows you to create elements in this manner. For example, for a slide show we can use</strong>
+            <pre class="fragment">
+                    &lt;slide-show transition="fade"&gt;
+                    &lt;slide src="slideone.jpg" thumb="slideone_thumb.jpg" caption="Look at this image"&gt;
+                    &lt;slide src="slidetwo.jpg" thumb="slidetwo_thumb.jpg" caption="Look at this other image"&gt;
+                    &lt;/slide-show&gt;
+                </pre>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>What Makes Web Components</h1>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Custom Elements</h1>
+            <ul>
+                <li class="fragment">Your own custom HTML tags and elements</li>
+                <li class="fragment">have their own scripted behaviour and CSS styling</li>
+                <li class="fragment">Create your own from scratch or extend existing element</li>
+                <li class="fragment">A Cool Component
+                    <ul>
+                        <li><a href="http://html5-demos.appspot.com/gangnam" target="_blank">http://html5-demos.appspot.com/gangnam</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Templates</h1>
+            <ul>
+                <li class="fragment">Inert HTML chunks (not live until you say so)
+                    <ul>
+                        <li>is a mechanism for holding client-side content that is not to be rendered when a page is loaded but may subsequently be instantiated during runtime using JavaScript</li>
+                    </ul>
+                </li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Shadow DOM</h1>
+            <ul>
+                <li class="fragment">DOM &amp; style encapsulation</li>
+                <li class="fragment">Each instance is its own little self contained world</li>
+                <li class="fragment"><a href="http://code.tutsplus.com/tutorials/intro-to-shadow-dom--net-34966" target="_blank">http://code.tutsplus.com/tutorials/intro-to-shadow-dom--net-34966</a>
+                </li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>HTML Imports</h1>
+            <ul>
+                <li class="fragment">Package and Share HTML/CSS/JS
+                </li>
+                <li class="fragment">“require()” for the web</li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Why Web Components</h1>
+            <ul>
+                <li class="fragment">Reusable</li>
+                <li class="fragment">Isolated</li>
+                <li class="fragment">Use HTML</li>
+                <li class="fragment">Reduce development time by 99%</li>
+                <li class="fragment">Google pays $10 per Web Component used</li>
+                <li class="fragment">Literally perfect</li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Are we Ready?</h1>
+            <img src="images/web-components-browser-support.jpg">
+        </ninja-slide>
+        <ninja-slide>
+            <h1>webcomponent.js</h1>
+            <strong>Polyfill for those who aren't ready</strong>
+            <div class="fragment">
+                <strong>Browser Support</strong>
+                <ul class="sm">
+                    <li>Chrome (Android, Chrome, Canary)</li>
+                    <li>Firefox</li>
+                    <li>IE10+</li>
+                    <li>Safari 6+</li>
+                    <li>Mobile Safari</li>
+                </ul>
+            </div>
+            <strong class="fragment">note: Polyfills come at a cost(bandwidth, processing). Especially shadow DOM</strong>
+        </ninja-slide>
+        <ninja-slide>
+            <h1> Polymer </h1>
+        </ninja-slide>
+        <ninja-slide>
+            <ul>
+                <li>Built on top of We Components standards</li>
+                <li> or on the polyfills</li>
+                <li>Not shipped with browser</li>
+                <li>Syntactic suger on top of vanilla web components</li>
+            </ul>
+        </ninja-slide>
+        <ninja-slide>
+            <h1>Before we get into demos.</h1>
+        </ninja-slide>
+    </ninja-presentation>
+</body>
+
+</html>

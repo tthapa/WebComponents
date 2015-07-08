@@ -1,0 +1,19 @@
+{
+  "name": "Introduction to Web Components",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tthapa/WebComponents",
+  "authors": [
+    "tthapa <thaman.singh.thapa@javra.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ninja-presentation": "~0.3.1"
+  }
+}
