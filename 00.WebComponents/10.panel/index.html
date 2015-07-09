@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Web components</title>
+    <style type="text/css">
+        body {
+            background: #e4e7ea;
+        }
+        
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        my-panel {
+            flex-grow: 1;
+            margin: 10px;
+        }
+    </style>
+    
+    <link rel="import" href="elements/my-panel.html">
+</head>
+
+<body>
+
+
+    <div class="flex">
+        <my-panel>
+            <h2>Hey yo!</h2>
+            <h1>This is the title</h1>
+            <p>Hello there!</p><span>test</span>
+        </my-panel>
+
+        <my-panel>
+            <h2>Introduction</h2>
+            <h1>My custom panel</h1>
+            <p>This is the content of the panel, we can add anything we need!</p>
+        </my-panel>
+    </div>
+
+
+</body>
+
+</html>
